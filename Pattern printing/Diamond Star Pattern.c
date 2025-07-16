@@ -1,24 +1,25 @@
 #include<stdio.h>
-int main()    // DIAMOND with 9 rows
-{
-    int i,j,k=0,x;
-    for (i=1; i<=9; i++)
+int main()    //DIAMOND
+{   int i,j,k=0,x;
+
+    for (i=1;i<=11;i++)
     {
-        i<=5? k++: k--;  // peak at row 5
+        i<=6?k++:k--;
         x=1;
-      for (j=1; j<=9; j++)
+        for(j=1;j<=11;j++)
         {
-            if(j>=6 - k && j<=4 + k&&x)
+            if(j>=7-k&&j<6+k&&x)
             {
                 printf("*");
-                x = 0;
+                x=0;
             }
-            else {
+            else{
                 printf(" ");
-                x = 1;
+                x=1;
             }
+
         }
-        printf("\n");
+    printf("\n");
+
     }
-    return 0;
 }
