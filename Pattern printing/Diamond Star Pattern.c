@@ -1,37 +1,24 @@
-#include <stdio.h>
-int main()
+#include<stdio.h>
+int main()    // DIAMOND with 9 rows
 {
-    int row, col;
-    int n = 5;
-
-    // Upper half (including middle row)
-    for(row = 1; row <= n; row++)
+    int i,j,k=0,x;
+    for (i=1; i<=9; i++)
     {
-        // Print spaces
-        for(col = 1; col <= n - row; col++)
-            printf(" ");
-
-        // Print stars
-        for(col = 1; col <= 2 * row - 1; col++)
-            printf("*");
-
+        i<=5? k++: k--;  // peak at row 5
+        x=1;
+      for (j=1; j<=9; j++)
+        {
+            if(j>=6 - k && j<=4 + k&&x)
+            {
+                printf("*");
+                x = 0;
+            }
+            else {
+                printf(" ");
+                x = 1;
+            }
+        }
         printf("\n");
     }
-
-    // Lower half (excluding middle row)
-    for(row = n - 1; row >= 1; row--)
-    {
-        // Print spaces
-        for(col = 1; col <= n - row; col++)
-            printf(" ");
-
-        // Print stars
-        for(col = 1; col <= 2 * row - 1; col++)
-            printf("*");
-
-        printf("\n");
-    }
-
     return 0;
 }
-
