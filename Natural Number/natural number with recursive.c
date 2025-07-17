@@ -1,12 +1,15 @@
 #include<stdio.h>
 void natural (int);
+
 int main()
 {
     int n;
     scanf("%d", &n);
     natural (n);
     return 0;
+    
 }
+
 void natural(int num)
 {
     if(num)
